@@ -1,0 +1,270 @@
+/* Обнуление */
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+body {
+  background: url(../img/wallpaper.jpg) center center no-repeat fixed;
+  background-color: #000;
+  color: #fff;
+  height: 100%;
+}
+.neon {
+  color: #f7f7f6;
+  /* Хороший цвет */
+  -webkit-animation: neon 2s ease-in-out infinite alternate;
+          animation: neon 2s ease-in-out infinite alternate;
+}
+/* Контент */
+.content {
+  height: 100%;
+  width: 100%;
+}
+/* Меню бургер */
+/* -Кнопка бургер- */
+.burger_menu_wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.btn_burger {
+  display: none;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  z-index: 13;
+  top: 10px;
+}
+/* Общие стили*/
+.btn_burger:before,
+.btn_burger:after {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+/* Средняя полоса */
+.btn_burger span {
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 100%;
+  height: 2px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+/* Верхняя полоса */
+.btn_burger:before {
+  top: 0;
+}
+/* Нижняя полоса */
+.btn_burger:after {
+  bottom: 0;
+}
+/* Активный класс (при нажатии) */
+.btn_burger.active:before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 9px;
+}
+.btn_burger.active:after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 9px;
+}
+.btn_burger.active span {
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+}
+/* -Меню- */
+.burger_menu {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+          justify-content: space-evenly;
+  position: fixed;
+  z-index: 12;
+  top: -100%;
+  /* Меню будет скрыто за верхней границей экрана */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(53, 54, 58, 0.9);
+  padding: 70px 10px 20px 10px;
+  overflow: auto;
+  /* Для возможности прокрутки меню, если требуется */
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  text-align: center;
+}
+.burger_menu .burger_list {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+}
+.burger_menu .burger_list a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+}
+/* Активное меню */
+.burger_menu.active {
+  top: 0;
+  /* Меню будет выезжать сверху */
+}
+/* Список меню */
+.header_list {
+  display: block;
+}
+.header_list li {
+  margin: 0px 0px 20px 0px;
+}
+/* Размер шрифта разделов меню */
+.header_link {
+  font-size: 24px;
+}
+.social {
+  padding: 10px 0;
+  position: absolute;
+  z-index: 11;
+  display: -webkit-box;
+  display: flex;
+  min-width: 100%;
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.social a {
+  margin: 0 5px;
+}
+.head,
+.foot {
+  position: absolute;
+  z-index: 10;
+  display: -webkit-box;
+  display: flex;
+  min-width: 100%;
+}
+.head .menu_item,
+.foot .menu_item {
+  padding: 50px;
+  font-size: 20px;
+  font-weight: 800;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(50% - 30px);
+}
+.head .menu_item a,
+.foot .menu_item a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+.head .menu_item_l,
+.foot .menu_item_l {
+  text-align: left;
+}
+.head .menu_item_r,
+.foot .menu_item_r {
+  text-align: right;
+}
+.foot {
+  bottom: 0;
+}
+footer {
+  position: absolute;
+  z-index: 11;
+  bottom: 2px;
+  width: 100%;
+  text-align: center;
+}
+footer .ds {
+  font-size: 13px;
+}
+footer .ds a {
+  text-decoration: none;
+  color: #6d6d6d;
+}
+@-webkit-keyframes neon {
+  from {
+    text-shadow: 0 0 10px #f5f0f0, 0 0 20px #101010, 0 0 30px #101010, 0 0 40px #101010, 0 0 50px #49ffe7, 0 0 60px #49ffe7, 0 0 70px #49ffe7;
+  }
+  to {
+    text-shadow: 0 0 20px #f0f3f5, 0 0 30px #9afaed, 0 0 40px #9afaed, 0 0 50px #9afaed, 0 0 60px #9afaed, 0 0 70px #9afaed, 0 0 80px #9afaed;
+  }
+}
+@keyframes neon {
+  from {
+    text-shadow: 0 0 10px #f5f0f0, 0 0 20px #101010, 0 0 30px #101010, 0 0 40px #101010, 0 0 50px #49ffe7, 0 0 60px #49ffe7, 0 0 70px #49ffe7;
+  }
+  to {
+    text-shadow: 0 0 20px #f0f3f5, 0 0 30px #9afaed, 0 0 40px #9afaed, 0 0 50px #9afaed, 0 0 60px #9afaed, 0 0 70px #9afaed, 0 0 80px #9afaed;
+  }
+}
+@media all and (max-width: 1599px) {
+  body {
+    background: url(../img/wallpaper_lg.jpg) center center no-repeat fixed;
+    background-color: #000;
+  }
+}
+@media all and (max-width: 767px) {
+  body {
+    background: url(../img/wallpaper_md.jpg) center center no-repeat fixed;
+    background-color: #000;
+  }
+  .social,
+  .menu {
+    display: none;
+  }
+  .btn_burger {
+    display: block;
+  }
+}
+@media all and (max-width: 576px) {
+  body {
+    background: url(../img/wallpaper_xs.jpg) center center no-repeat fixed;
+    background-color: #000;
+  }
+}
+@media all and (max-width: 320px) {
+  body {
+    background: url(../img/wallpaper_xxs.jpg) center center no-repeat fixed;
+    background-color: #000;
+  }
+}
+@media all and (orientation: landscape) and (max-width: 812px) {
+  body {
+    background: url(../img/wallpaper_xs_hr.jpg) center center no-repeat fixed;
+    background-color: #000;
+  }
+  .burger_menu_wrapper {
+    -webkit-box-pack: left;
+            justify-content: left;
+  }
+  .btn_burger {
+    left: 10px;
+  }
+}
