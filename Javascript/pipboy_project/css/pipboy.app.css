@@ -1,0 +1,363 @@
+/* Подключение скачанного шрифта */
+@font-face {
+    font-family: Pipboy;
+    src: url('../fonts/monofonto.ttf');
+}
+
+body {
+    font-family: Pipboy, sans-serif;    /* назначение скачанного шрифта */
+    font-weight: bold;
+    color: #14fe17;
+    background: #272b23;
+}
+
+/* Добавление на всю страницу полос перечёркивающих весь контент (в стиле Fallout PipBoy) */
+body::after {
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: repeating-linear-gradient(0deg, rgba(0,0,0,.5), rgba(0,0,0,.4) 1px, transparent 1px, transparent 2px);
+    opacity: .3; /* Определяет прозрачность. В данном случае снижает частоту полос на странице */
+    /* После настрое выше элементы на странице перестанут быть отзывчивыми. Исправление ниже */
+    z-index: 10;
+    pointer-events: none;
+}
+
+
+/* СТРАНИЦА ПРМТ */
+
+/* Меню первого уровня STAT-RADIO  */
+                                /* Добавление подчёркивающей линии меню STAT-RADIO и footer */
+.navbar, .pip-footer {
+    border-bottom: 2px solid;
+    margin: 0px 10px;
+}
+
+                                /* Отрисовка загиба вниз линии, подчёркивающей меню STAT-RADIO */
+.navbar::before, .navbar::after {
+    height: 5px;
+    width: 2px;
+    content: "";
+    position: absolute;
+    display: block;
+    z-index: 8;
+    background: #14fe17;
+    bottom: -7px;
+}
+
+.navbar::before {
+    left: 0px;
+}
+
+.navbar::after {
+    right: 0px;
+}
+
+                    /* Добавление плавающего элемента для выделения активной вкладки линиями посередине (меню STAT-RADIO) */
+.navbar-item.active::before {
+    content: "";
+    position: absolute;
+    background: #272b23;
+    width: 100%;
+    height: 21px;
+    top: 19px;
+    /* Отрисовка боковых линий элемента */
+    border-left: 2px solid; 
+    border-right: 2px solid; 
+    border-top: 2px solid; 
+} 
+
+                            /* Расположение элементов (меню STAT-RADIO) */
+.navbar.navbar-light .navbar-nav {
+    margin: 0px 200px;
+}
+
+.fLevel {                 /* Задано корректное значение внутренних границ элементов (для огибающего поля выделения) */ 
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    /* Добавление свойств элементам для отображения сверху перекрывающего элемента */
+    z-index: 2;
+    position: relative;
+    background: #272b23;
+}
+
+.navbar-nav {
+    width: 100%;
+}
+
+.navbar-light ul.navbar-nav > li {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+                            /* Цвет элементов (меню STAT-RADIO и меню STATUS - PERKS) */
+ul > li.nav-item > a.nav-link, ul > li.navbar-item > a.nav-link {
+    color: #14fe17 !important;
+    font-size: 27px;
+    line-height: 22px;
+    padding-bottom: 0px;
+}
+
+/* Меню второго уровня STATUS - PERKS */
+
+.container {
+    width: 100%;
+}
+
+                            /* Расположение элементов (меню STATUS - PERKS) */
+.nav.nav-tabs {
+    padding-top: 1%;
+    margin: 20px;
+    border-bottom: none;
+}
+
+                            /* Снятие выделения с активного элемента */
+.nav.nav-tabs > li > a {
+    font-size: 22px !important;
+    background: transparent !important;
+    border: 1px solid transparent !important;
+}
+
+                            /* Потускнение цвета у последующих рядом стоящих элементов */
+.nav.nav-tabs > li:nth-child(2) > a {
+    opacity: .5;
+}
+
+.nav.nav-tabs > li:nth-child(3) > a {
+    opacity: .2;
+}
+
+.nav.nav-tabs > li:nth-child(4) > a {
+    opacity: .1;
+}
+
+                            /* Убираем границы выделения при наведении на элементы (меню STATUS - PERKS) */
+.nav.nav-tabs > .nav-item > .nav-link:hover {
+    border: 1px solid transparent; /* если поставить просто border: none, то элементы будут слегка увеличиваться при наведении */
+}
+
+/* Картинка в меню второго уровня (STATUS - PERKS) */
+.center-image {         /* Центрирование картинки */
+    position: absolute;
+    margin-left: 100px;
+}
+
+.center-image img {
+    margin: auto;
+    display: block;
+    position: relative;
+    max-height: 300px;
+    margin-top: 100px;
+    filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(7) brightness(1) contrast(2); /* цветовая схема для картинки */
+    margin-top: 50px;
+    margin-left: -10px;
+}
+
+.stat-bars > .row {             /* Статус бары (общие настройки) */
+    margin-bottom: 100px;
+}
+
+.stat-bar {
+    width: 70px;
+    margin: auto;
+}
+
+.w10 {                  /* Задать шкалу статус-бара в процентах */
+    width: 10% !important;
+}
+
+.w20 {
+    width: 20% !important;
+}
+
+.w30 {
+    width: 30% !important;
+}
+
+.w40 {
+    width: 40% !important;
+}
+
+.w50 {
+    width: 50% !important;
+}
+
+.w60 {
+    width: 60% !important;
+}
+
+.w70 {
+    width: 70% !important;
+}
+
+.w80 {
+    width: 80% !important;
+}
+
+.w90 {
+    width: 90% !important;
+}
+
+#status {
+    max-width: 400px;
+    margin: auto;
+}
+
+.row .floor {               /* Параметры для статус-бара (тело) */
+    margin-bottom: 20px;
+}
+
+/* Иконки под картинкой со статусами */
+
+.stat-numbers {
+    padding-right: 3%;
+}
+.stat-numbers .col-1, .stat-numbers .col-2 {
+    background: rgba(16,255,0,.15);
+    margin-right: 5px;
+}
+
+.stat-numbers .col-1.transparent, .stat-numbers .col-2.transparent {    /* Отменить окрашивание  */
+    background: transparent;
+}
+
+.stat-numbers img {
+    width: 100%;
+    padding-top: 5px;
+    filter: grayscale(1) invert(1) sepia(100%) hue-rotate(55deg) saturate(30) brightness(1) contrast(2)
+}
+
+.icon img {
+    width: 20px;
+    padding-right: 5px;
+}
+
+/* Подвал */
+.pip-footer {
+    position: fixed;
+    bottom: 0px;
+    border: none;
+    width: 98%;
+    color: #14fe17;
+}
+
+/* Имя под иконками */
+.name {
+    text-align: center;
+    padding-top: 25px;
+}
+
+
+                        /* Настройки расположения текста footer */
+.pip-footer .row {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+                        /* Изображение прогресс-бара УРОВ */
+.level-progress {
+    width: 70%;
+    height: 10px;
+    border: 2px solid;
+    display: inline-block;
+}
+
+.level-progress-indicator {
+    height: 6px;
+    background: #14fe17;
+    width: 70%;
+}
+
+/* Окрашивание элементов footer */
+.pip-footer .col-3, .pip-footer .col-6 {
+    background: rgba(16,255,0,.15);
+}
+
+.pip-footer .col-6 {
+    margin: 0px 5px;
+    flex: 0 0 48%; /* сжимает элемент */
+}
+
+
+
+
+
+/* СТРАНИЦА ОРУЖИЕ */
+
+
+/* Вкладка ОРУЖИЕ */
+#status.tab-pane.full {
+    width: 100%;
+    max-width: 100%;
+}
+
+.item-list {
+    float: left;
+    padding: 0px;
+    list-style: none;
+    margin: 0px;
+}
+
+/* Список предметов в инвентаре */
+.item-list li a {
+    display: block;
+    width: 300px;
+    padding: 5px 10px;
+    border-radius: 2px;
+    color: #14fe17;
+    padding-left: 25px;
+}
+
+.item-list li a:hover {
+    text-decoration: none;
+    background: #14fe17;
+    color: #272b23;
+}
+
+/* Добавление чекбокса у снаряженного предмета в инвентаре */
+.item-list li a.active::before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background: #14fe17;
+    left: 25px;
+    margin-top: 6px;
+}
+
+.item-list li a.active:hover::before {  /* другой цвет когда наведение на предмете в инвентаре*/
+    background: #272b23;
+}
+
+/* Свойства предметов в инвентаре */
+
+
+.tab-pane.full {                    /* Расположение свойств по высоте (без свойст ниже не работает) */
+    height: calc(100vh - 180px);
+}
+
+.item-stats {
+    position: absolute;
+    right: -30px;                   /* Костыль - блок с цифрами выходит за пределы основного блока */
+    bottom: 2px;
+    width: 220px;
+}
+
+.item-stats .row .col-12 {
+    background: rgba(16,255,0,.15);     /* Цвет свойств */
+    margin-bottom: 5px;
+}
+
+.pull-left {                        /* Расположение свойств по горизонтали */
+    float: left !important;
+}
+
+.pull-right {
+    float: right !important;
+}

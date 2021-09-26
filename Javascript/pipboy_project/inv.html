@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PipBoy</title>
+    <!-- Подключение Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Подключение своего файла CSS -->
+    <link rel="stylesheet" href="css/pipboy.app.css">
+</head>
+<body>
+    <!-- Меню первого уровня (STAT - RADIO) -->
+    <nav class="navbar navbar-expand-lg navbar-light"> <!-- Без navbar-expand-lg меню не становилось горизонтальным -->
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav nav-fill">
+                <li class="navbar-item"><a href="index.html" class="nav-link fLevel">ПРМТ</a></li>
+                <li class="navbar-item active"><a href="inv.html" class="nav-link fLevel">ПРЕД</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link fLevel">ИНФО</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link fLevel">КАРТА</a></li>
+                <li class="navbar-item"><a href="#" class="nav-link fLevel">РАДИО</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Меню второго уровня (ОРУЖИЕ - РАЗНОЕ) -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a href="#status" class="nav-link" data-toggle="tab">ОРУЖИЕ</a></li> 
+                    <li class="nav-item"><a href="#special" class="nav-link" data-toggle="tab">ОДЕЖДА</a></li>
+                    <li class="nav-item"><a href="#perks" class="nav-link" data-toggle="tab">ПОМОЩЬ</a></li>
+                    <li class="nav-item"><a href="#etc" class="nav-link" data-toggle="tab">РАЗНОЕ</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active full" id="status" role="tabpanel">
+                        <ul class="item-list">
+                            <li><a href="#" class="44_pistol">.44 пистолет</a></li>
+                            <li><a href="#" class="10mm_pistol">10-мм пистолет</a></li>
+                            <li><a href="#" class="assault_rifle">Штурмовой карабин</a></li>
+                        </ul>
+                        <div class="item-stats">
+                            <!-- Свойства оружия - Урон -->
+                            <div class="row-hightlight">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="damage pull-right">-</div>
+                                        <span class="pull-left">Урон</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Свойства оружия - Боезапас -->
+                            <div class="row-hightlight">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="ammo pull-right">-</div>
+                                        <span class="pull-left">Боезапас</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Свойства оружия - Скорострельность -->
+                            <div class="row-hightlight">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="fire_rate pull-right">-</div>
+                                        <span class="pull-left">Скорострельность</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Свойства оружия - Дальность -->
+                            <div class="row-hightlight">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="range pull-right">-</div>
+                                        <span class="pull-left">Дальность</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Свойства оружия - Меткость -->
+                            <div class="row-hightlight">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="accuracy pull-right">-</div>
+                                        <span class="pull-left">Меткость</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Свойства оружия - Вес -->
+                            <div class="row-hightlight">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="weight pull-right">-</div>
+                                        <span class="pull-left">Вес</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Свойства оружия - Цена -->
+                            <div class="row-hightlight">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="value pull-right">-</div>
+                                        <span class="pull-left">Цена</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Меню второго уровня S.P.E.C.I.A.L. -->
+                    <div class="tab-pane" id="special" role="tabpanel">
+                        armor
+                    </div>
+                    <!-- Меню второго уровня СПОСОБНОСТИ -->
+                    <div class="tab-pane" id="perks" role="tabpanel">
+                        aid
+                    </div>
+                     <!-- Меню второго уровня СПОСОБНОСТИ -->
+                     <div class="tab-pane" id="etc" role="tabpanel">
+                        etc
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подвал -->
+    <nav class="pip-footer">
+        <div class="row">
+            <div class="col-3">
+                ОЗ 90/90
+            </div>
+            <div class="col-6">
+                УРОВ 17
+                <!-- Прогресс-бар -->
+                <div class="level-progress">
+                    <div class="level-progress-indicator"></div>
+                </div>
+            </div>
+            <div class="col-3">
+                ОД 50/50
+            </div>
+        </div>
+    </nav>
+
+    <!-- Подключение jQuery -->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <!-- Подключение Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Подключение своего файла JavaScript -->
+    <script src="js/pipboy.app.js"></script>
+</body>
+</html>
