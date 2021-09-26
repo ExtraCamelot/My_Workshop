@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>[#PR01-1102] BR-3. Не заблокирована функция scroll основной страницы при использовании мобильного меню</title>
+    <meta http-equiv="Content-Type" Content="application/vnd.ms-word; charset=UTF-8">
+        <style type="text/css">
+
+.tableBorder, .grid
+{
+    background-color: #fff;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableBorder td, .grid td
+{
+    vertical-align: top;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+.noPadding
+{
+    padding: 0 !important;
+}
+
+h3 .subText
+{
+    font-size: 60%;
+    font-weight: normal;
+}
+
+.tabLabel
+{
+    font-weight: bold;
+    border: 1px solid #ccc;
+    border-bottom:none;
+    padding: 2px;
+    display: inline;
+}
+
+td.blank
+{
+    padding: 0;
+    margin: 0;
+}
+
+.blank td
+{
+    border: none;
+}
+
+#descriptionArea
+{
+    margin: 0;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+hr
+{
+    border-top:1px solid #aaa;
+}
+
+hr.fullcontent
+{
+  height: 15px;
+  padding: 10px 0;
+  background: #fff url('https://nav4it.atlassian.net/images/icons/hr.gif') no-repeat scroll center;
+}
+
+</style>
+
+</head>
+<body>
+
+<table class="tableBorder" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" width="100%" colspan="2" valign="top">
+                            <h3 class="formtitle">
+                        [PR01-1102]&nbsp;<a href="https://nav4it.atlassian.net/browse/PR01-1102">BR-3. Не заблокирована функция scroll основной страницы при использовании мобильного меню</a>
+            <span class="subText">
+               Создано: 16/авг/21                   &nbsp;Обновлено: 16/авг/21
+
+                                            </span>
+            </h3>
+        </td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Статус:</b></td>
+        <td width="80%">К выполнению</td>
+    </tr>
+    <tr>
+        <td width="20%"><b>Проект:</b></td>
+        <td width="80%"><a href="https://nav4it.atlassian.net/secure/BrowseProject.jspa?id=10000">QAPreport</a></td>
+    </tr>
+
+        <tr>
+            <td><b>Компоненты:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии Affects:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+
+        <tr>
+            <td><b>Версии фикса:</b></td>
+            <td>
+                            Нет
+                </td>
+    </tr>
+    
+    </table>
+
+<br />
+<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td bgcolor="#f0f0f0" valign="top" width="20%">
+            <b>Тип:</b>
+        </td>
+        <td bgcolor="#ffffff" valign="top"  width="30%" >
+            Баг
+        </td>
+
+                    <td bgcolor="#f0f0f0">
+                <b>Приоритет:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap>
+                Серьезно
+            </td>
+            </tr>
+    <tr>
+                        <td bgcolor="#f0f0f0" valign="top" width="20%">
+                <b>Автор:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top"  width="30%" >
+                                        
+                
+        
+            <a class="user-hover" rel="5dd864109d79ad0ef53a59f6"
+                id="word_reporter_5dd864109d79ad0ef53a59f6"
+                href="https://nav4it.atlassian.net/secure/ViewProfile.jspa?accountId=5dd864109d79ad0ef53a59f6">
+                    QA Student
+                </a>
+
+                            </td>
+        
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Исполнитель:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" nowrap  width="30%" >
+                                    Не назначено
+                            </td>
+            </tr>
+    	<tr>
+		<td bgcolor="#f0f0f0" width="20%">
+			<b>Решение:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+            				Нет решения
+                    </td>
+                    <td bgcolor="#f0f0f0" width="20%">
+                <b>Голоса:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top" width="30%" nowrap>
+                0
+            </td>
+        
+    </tr>
+    
+        <tr>
+        <td bgcolor="#f0f0f0" width="20%">
+            <b>Метки:</b>
+        </td>
+        <td id="labels-12509-value" class="value" bgcolor="#ffffff" valign="top" colspan="3" nowrap>
+                            Денис_Ковтун                    </td>
+    </tr>
+    
+    	<tr>
+        		<td bgcolor="#f0f0f0" width="20%"><b>Оценка остатка:</b></td>
+        <td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Затраченное время:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+	</tr>
+    <tr>
+                <td bgcolor="#f0f0f0" width="20%"><b>Исходная оценка:</b></td>
+		<td bgcolor="#ffffff" valign="top" nowrap width="80%" colspan="3">
+                            Не определено
+            		</td>
+    </tr>
+    
+    	<tr>
+
+		<td bgcolor="#f0f0f0" width="20%" valign="top">
+			<b>Окружение:</b>
+		</td>
+		<td bgcolor="#ffffff" valign="top" colspan="3">
+            <p><b>Google Chrome</b> Версия 92.0.4515.131 (Официальная сборка), (64 бит)</p>
+		</td>
+	</tr>
+    </table>
+
+
+
+    <br />
+
+    	<table class="grid" cellpadding="0" cellspacing="0" border="0" width="100%">
+            
+
+                <tr>
+            <td bgcolor="#f0f0f0" width=20% valign=top>
+                <b>Вложения:</b>
+            </td>
+            <td bgcolor="#ffffff" valign="top">
+                                    <img src="https://nav4it.atlassian.net/images/icons/attach/image.gif" height="16" width="16" border="0" alt="JPEG файл">
+                    BR-3.1.jpg &nbsp;&nbsp;&nbsp;
+                                    <img src="https://nav4it.atlassian.net/images/icons/attach/image.gif" height="16" width="16" border="0" alt="JPEG файл">
+                    BR-3.2.jpg &nbsp;&nbsp;&nbsp;
+                            </td>
+        </tr>
+        
+    
+
+
+
+</table>
+
+    <br/>
+
+    <table cellpadding="2" cellspacing="0" border="0" width="100%" align="center">
+    <tr>
+        <td bgcolor="#bbbbbb" width="1%" nowrap align="center">
+            &nbsp;<font color="#ffffff"><b>Описание</b></font>&nbsp;
+        </td>
+        <td>&nbsp;</td>
+    </tr>
+    </table>
+
+    <table cellpadding="0" cellspacing="0" border="0" width="100%">
+    <tr>
+        <td id="descriptionArea">
+            <p><b>Предусловие</b>: Открыть в браузере страницу <a href="https://planetakino.ua/ru/" class="external-link" rel="nofollow noreferrer">https://planetakino.ua/ru/</a><br/>
+<b>Шаги</b>:</p>
+
+<ol>
+	<li>Открыть панель инструментов разработчика Chrome (DevTools).</li>
+	<li>Включить функцию эмуляции устройств браузера (toggle device toolbar ).</li>
+	<li>Из списка предложенных устройств для эмуляции выбрать Iphone X (Эмулируемое устройство может быть любым смартфоном, главное условие: мобильное меню должно занимать 100% длины экрана).</li>
+	<li>Опционально: обновить страницу в браузере для обновления настроек эмуляции.</li>
+	<li>Нажать на меню-бургер (три вертикальных полосы в верхней правой части экрана.</li>
+	<li>Провести несколько раз по области меню снизу вверх (эмитировать прокрутку меню)</li>
+</ol>
+
+
+<p><b>Ожидаемый результат</b>: Возможная прокрутка меню на устройствах с высотой экрана менее 550px. При этом положение открытой страницы сайта должно оставаться неизменным.<br/>
+<b>Фактический результат</b>: Прокрутка экрана в области мобильного меню не влияет на список и отображение пунктов меню, но влияет на уровень полоски прокрутки открытой страницы и на фактическое положение страницы. </p>
+            <br/>
+        </td>
+    </tr>
+    </table>
+
+Полученный Mon Aug 16 20:38:55 UTC 2021 QA Student используя JIRA 1001.0.0-SNAPSHOT#100172-sha1:c3c604213ab1b008a2fbcf5e0743e0d4faf2ce31.
+
+</body>
+</html>
