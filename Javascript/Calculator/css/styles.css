@@ -1,0 +1,30 @@
+html, body{
+	margin: 0;
+}
+
+form {
+	margin: 5px;
+}
+
+option {
+	font-weight: 800;
+	width: 15px;
+}
+
+.items{
+	display: flex;
+}
+
+.item{
+	width: 200px;
+	height: 200px;
+	background: #eee;
+	margin: 20px;
+	box-sizing: border-box;
+	border: 1px solid transparent;
+}
+
+.item-active{
+	border: 1px solid red;
+	box-shadow: 10px 10px 10px #222;
+}
