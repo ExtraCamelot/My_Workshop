@@ -1,0 +1,66 @@
+html, body{
+    margin: 0;
+    background: #eee;
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    color: #fff;
+    height: 50px;
+    width: 100%;
+}
+
+.menu a{
+    color: inherit;
+    line-height: 50px;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: color 0.4s;
+}
+
+.menu .menu__link-active{
+    color: #ff0;
+}
+
+.content{
+   margin-top: 70px;
+}
+/* Кнопка наверх */
+.btn__top {
+    display: none;
+    position: fixed;
+    top: 90vh;
+    left: 95%;
+    cursor: pointer;
+}
+.btn__top-active {
+    display: block;
+}
+
+.btn__top img{
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 992px) {
+    .btn__top {
+        left: 92%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .btn__top {
+        left: 90%;
+    }
+}
+@media screen and (max-width: 576px) {
+    .btn__top {
+        left: 86%;
+    }
+}
+@media screen and (max-width: 320px) {
+    .btn__top {
+        left: 83%;
+    }
+}
