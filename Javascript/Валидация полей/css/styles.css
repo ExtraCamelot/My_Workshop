@@ -1,0 +1,11 @@
+html, body{
+	margin: 40px;
+}
+
+.err{
+	outline: 1px solid red;
+}
+
+.invisible {
+	display: none;
+}
