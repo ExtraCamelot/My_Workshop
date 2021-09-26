@@ -1,0 +1,8 @@
+7.4.5. Postman GET-запросы
+https://disk.yandex.ru/d/xs8eg72pQ344_w
+
+7.7. Postman - API тесты для функции фильтрации отбора животных (Дом Питомца)
+https://disk.yandex.ru/i/xsI4EQmsNOJ7cg
+
+8.6 Postman - Создание сложного сценария в Postman
+https://disk.yandex.ru/i/Pa9-vl4uynD9Qg
