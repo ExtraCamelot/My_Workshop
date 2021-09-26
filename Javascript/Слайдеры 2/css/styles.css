@@ -1,0 +1,68 @@
+html, body, ul, li{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+
+
+
+
+
+/* .swiper-container {
+    max-width: 600px;
+    max-height: 600px;
+} */
+
+/* Стрелки */
+/* .swiper-button-prev::after,
+.swiper-button-next::after {
+	color: #fff;
+} */
+
+/* Пагинация */
+/*
+.pagin_style .swiper-pagination-bullet-active{
+	width: 15px;
+	height: 15px;
+	line-height: 15px	;
+	font-size: 14px;
+	background: #fff;
+}
+.pagin_style .swiper-pagination-bullet{
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	font-size: 14px;
+	background: #fff;
+} */
+
+
+/*
+.gallery{
+	width: 860px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.gallery .photos{
+	position: relative;
+	height: 670px;
+	overflow: hidden;
+}
+
+.gallery .photos img{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	transform: translateX(100%);
+}
+
+.gallery .photos img.showed{
+	transform: translateX(0);
+} */
