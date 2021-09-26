@@ -1,0 +1,170 @@
+html, body {
+    height: 100%;         /* Для того, чтобы прижать footer к низу страницы */
+}
+
+/* Стили для логотипа КиноМонстр */
+.header a, a:hover {
+    color: #f0ad4e;
+    text-decoration: none;
+}
+
+.header h1 {
+    letter-spacing: 15px;
+    font-size: 300%;
+}
+
+.header p {
+    color: white !important; /* !important - Данное css-свойство указывает браузеру, что это самый приоритетный стиль и нужно игнорировать объявленные ранее стиль у данного элемента */
+    font-size: 90%;
+    letter-spacing: 3px;
+}
+
+/* Цвет меню навигации */
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: #fff;
+    background-color: #346270;
+}
+
+.nav-pills>li>a {        /* Изменение цвета ссылок в меню */
+    color: #fff;
+}
+
+.nav-pills>li>a:hover {        /* Изменение цвета веделения элемента меню при наведении */
+    background-color: #346270;
+}
+
+.navbar-inverse {        /* Отсупы в меню навигации */
+    padding: 1%;
+    border-radius: 0px;  /* убрать стандартное скругление углов header'а */
+}
+
+.clear {
+    clear: both;        /* Учитывает плавающие элементы с обоих сторон */
+    height: 63px;
+}
+
+.wrapper {
+    min-height: 100%;
+}
+
+/* Стили основного контента */
+.films_block {
+    text-align: center;
+}
+
+.films_block img {
+    margin-bottom: 5%;
+    border-radius: 5px;
+    border: solid 5px #dad7d5;
+    width: 100%; /* для того чтобы картинка правильно масштабировалась*/
+}
+
+.film_label {
+    padding: 2%;
+    margin-bottom: 4%;
+}
+
+.margin-8 {
+    margin-top: 8%;
+}
+
+/* Стили для сайд-бара */
+
+.panel {
+    border: none;
+}
+
+.panel-body {
+    background-color: #f9f9f9;
+}
+
+.panel-info>.panel-heading {
+    background-color: #f0ad4e;
+    color: white;
+    border-color: transprent;
+}
+
+.sidebar-header {
+    font-size: 120%;
+    letter-spacing: 2px;
+}
+
+.input-lg {
+    font-size: 14px;
+}
+
+.form-control{
+    border-radius: 0px;
+}
+
+/* Стили для Рейтинга фильмов */
+
+.list-group-item-warning { /* ??? Ни на что не влияет*/
+    color: #8a6d3b;
+    background-color: #f9f9f9;
+}
+
+.badge {                        /* Цвет бейджа с цифрами рейтинга */
+    background-color: #000000;
+}
+
+/* Стили для страницы Фильмы (show.html) */
+
+.info-block {
+    font-size: 120%;
+}
+
+.info-block .badge {
+    font-size: 80%;
+}
+
+.info-block span {
+    margin-right: 3%;
+}
+
+textarea.form-control {
+    height: 200px;
+}
+
+/* Стили для Рейтинг фильмов */
+
+.table tbody>tr>td.vert-align {
+    vertical-align: middle;
+}
+
+/* Стили для Подвала */
+footer {
+    color: #666;
+    background-color: #222;
+    padding: 17px 0 18px 0;
+    border-top: 1px solid black;
+}
+
+footer a {
+    color: #999;
+}
+
+footer a:hover {
+    color: #efefef;
+}
+
+/* Для мелкоформатных дисплеев (мобильные устройства) */
+
+@media (max-width: 767px) {
+    .nav-pills>li {        /* На мелкоформатных дисплеях отменяется свойство .nav-pills по отношению к элементам li о прижатии к левому краю */
+        float: none;
+    }
+
+    .nav-pills { /* изменение отдельного свойства для класса .nav-pills */
+        text-align: center; /* выстраивание элементов по центру */
+    }
+
+    .header h1 {
+        font-size: 280%;
+        letter-spacing: 5px;
+    }
+
+    .header {
+        text-align: center;
+    }
+}
